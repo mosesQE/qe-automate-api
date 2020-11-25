@@ -1,0 +1,27 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AuthenticateUser, org.scalatest.tools.Framework$$anon$1@200aacc0, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAuthenticateUser:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- AuthenticateUserSunny200[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- AuthenticateUserRainy401 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.IllegalStateException: Expected response body to be verified as JSON, HTML or XML but no content-type was defined in the response.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mTry registering a default parser using:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   RestAssured.defaultParser(<parser type>);[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mContent was:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 541 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	AuthenticateUser[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
