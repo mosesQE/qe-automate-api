@@ -40,15 +40,21 @@ class AuthenticateUser extends FunSuite {
              .post(url+endpoint)
           .Then()
               .spec(Response401())
-              .and().assertThat()
-              .body("authorization", containsString("Bearer "))
-              .and()
               .extract().response()
         savedResponse = response.asString()
     }
 
+    test("TestAuthorizeQE") {
+        val token = AuthorizeQE()
+    }
+
 
     def RequestBody200(): String = {
+        val map = Map("username" -> "qe", "password" -> "nic&moloveqe")
+        JsonUtil.toJson(map)
+    }
+
+    def RequestBodyQE(): String = {
         val map = Map("username" -> "qe", "password" -> "nic&moloveqe")
         JsonUtil.toJson(map)
     }
@@ -59,7 +65,7 @@ class AuthenticateUser extends FunSuite {
     }
 
     def RequestAsJson(): RequestSpecification = {
-        var builder = new RequestSpecBuilder
+        val builder = new RequestSpecBuilder
         builder.setBaseUri(url+endpoint)
         builder.setContentType("application/json")
         return builder.build()
@@ -78,5 +84,18 @@ class AuthenticateUser extends FunSuite {
         builder.expectStatusCode(401)
         builder.expectStatusLine("HTTP/1.1 401 Unauthorized")
         return builder.build
+    }
+
+    def AuthorizeQE(): String = {
+        return given()
+              .spec(RequestAsJson())
+              .body(RequestBodyQE())
+          .when()
+              .post(url+endpoint)
+          .Then()
+              .spec(Response200())
+              .and()
+              .extract()
+                .path("authorization")
     }
 }
